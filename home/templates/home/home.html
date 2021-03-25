@@ -1,0 +1,35 @@
+{% load static %}
+<div class="container row">
+	<div class="card col-md-7 elevation-5" style="height:600px; display:flex;">
+		<h1>Announcements:</h1>
+		<div class="card-body border border-warning m-1">
+			-Featured items by the owner <br>
+			-Announcements <br>
+			-Link to guides
+		</div>
+	</div>
+	<div class="card col ml-2" style="min-height: 300px">
+	        <embed src="{% url 'store_mini' %}" class="col"></embed>
+	    <!-- /.card-body -->
+	    <div class="card-footer">
+	      <a href="/store">See all items</a>
+	    </div>
+    	<!-- /.card-footer-->
+    </div>
+    <div class="card col-md-5">
+    	<div class="card-title">
+    		How to order video:
+    	</div>
+    	<div class="card-body">
+    		<iframe width="100%" height="300" src="https://www.youtube.com/embed/obZMr9URmVI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    	</div>
+    </div>
+    <div class="card col ml-2 elevation-5" style="min-height:300px;display:flex;">
+    	<h3>Customer's Testimonials:</h3>
+	    <div>
+	    	(an auto-sliding customer testimonial page, fb-login preferred)
+	    </div>
+    	<!-- /.card-footer-->
+    </div>
+	
+</div>

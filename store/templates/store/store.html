@@ -1,0 +1,30 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block store_content %}
+	<div class="row">
+		{% for product in products %}
+		<div class="col-lg-4">
+
+			<img class="thumbnail" src="{{product.imageURL}}">
+			<!-- not used as only site admins can post items for sale -->
+			<!-- <a href="{#% url 'profile' product.user.username %#}">
+				<img class="rounded-circle mr-auto" src="{{product.user.profile.image.url}}" style="height: 30px; width: 30px; position: relative;
+				top: -10px; left: 10px"> <small class="text-dark ml-2">{{product.user.username}}</small>
+			</a> -->
+			<div class="box-element product">
+				<h6><strong>{{product.name}}</strong> </h6>
+				<hr>
+
+				<button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+				
+				<a class="btn btn-outline-success" href="#">View</a>
+				<h4 style="display: inline-block; float: right"><strong>${{product.price}}</strong></h4>
+
+
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	
+
+{% endblock store_content %}
